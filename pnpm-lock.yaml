@@ -27,10 +27,10 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  registry.npmmirror.com/@babel/parser/7.17.7:
-    resolution: {integrity: sha512-bm3AQf45vR4gKggRfvJdYJ0gFLoCbsPxiFLSH6hTVYABptNHY6l9NrhnucVjQ/X+SPtLANT9lc0fFhikj+VBRA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/parser/-/parser-7.17.7.tgz}
+  registry.npmmirror.com/@babel/parser/7.17.8:
+    resolution: {integrity: sha512-BoHhDJrJXqcg+ZL16Xv39H9n+AqJ4pcDrQBGZN+wHxIysrLZ3/ECwCBUch/1zUNhnsXULcONU3Ei5Hmkfk6kiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/parser/-/parser-7.17.8.tgz}
     name: '@babel/parser'
-    version: 7.17.7
+    version: 7.17.8
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -95,7 +95,7 @@ packages:
     version: 0.29.8
     dependencies:
       domelementtype: registry.npmmirror.com/domelementtype/2.2.0
-      domhandler: registry.npmmirror.com/domhandler/4.3.0
+      domhandler: registry.npmmirror.com/domhandler/4.3.1
       htmlparser2: registry.npmmirror.com/htmlparser2/7.2.0
       pug: registry.npmmirror.com/pug/3.0.2
     dev: true
@@ -124,7 +124,7 @@ packages:
     version: 0.29.8
     dependencies:
       '@volar/shared': registry.npmmirror.com/@volar/shared/0.29.8
-      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.9
+      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.10
     dev: true
 
   registry.npmmirror.com/@volar/vue-code-gen/0.29.8:
@@ -159,7 +159,7 @@ packages:
     name: '@vue/compiler-core'
     version: 3.2.31
     dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.7
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.8
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.31
       estree-walker: registry.npmmirror.com/estree-walker/2.0.2
       source-map: registry.npmmirror.com/source-map/0.6.1
@@ -177,7 +177,7 @@ packages:
     name: '@vue/compiler-sfc'
     version: 3.2.31
     dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.7
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.8
       '@vue/compiler-core': registry.npmmirror.com/@vue/compiler-core/3.2.31
       '@vue/compiler-dom': registry.npmmirror.com/@vue/compiler-dom/3.2.31
       '@vue/compiler-ssr': registry.npmmirror.com/@vue/compiler-ssr/3.2.31
@@ -203,7 +203,7 @@ packages:
     name: '@vue/reactivity-transform'
     version: 3.2.31
     dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.7
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.8
       '@vue/compiler-core': registry.npmmirror.com/@vue/compiler-core/3.2.31
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.31
       estree-walker: registry.npmmirror.com/estree-walker/2.0.2
@@ -305,7 +305,7 @@ packages:
     name: constantinople
     version: 4.0.1
     dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.7
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.8
       '@babel/types': registry.npmmirror.com/@babel/types/7.17.0
     dev: true
 
@@ -327,7 +327,7 @@ packages:
     version: 1.3.2
     dependencies:
       domelementtype: registry.npmmirror.com/domelementtype/2.2.0
-      domhandler: registry.npmmirror.com/domhandler/4.3.0
+      domhandler: registry.npmmirror.com/domhandler/4.3.1
       entities: registry.npmmirror.com/entities/2.2.0
     dev: true
 
@@ -337,10 +337,10 @@ packages:
     version: 2.2.0
     dev: true
 
-  registry.npmmirror.com/domhandler/4.3.0:
-    resolution: {integrity: sha512-fC0aXNQXqKSFTr2wDNZDhsEYjCiYsDWl3D01kwt25hm1YIPyDGHvvi3rw+PLqHAl/m71MaiF7d5zvBr0p5UB2g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domhandler/-/domhandler-4.3.0.tgz}
+  registry.npmmirror.com/domhandler/4.3.1:
+    resolution: {integrity: sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/domhandler/-/domhandler-4.3.1.tgz}
     name: domhandler
-    version: 4.3.0
+    version: 4.3.1
     engines: {node: '>= 4'}
     dependencies:
       domelementtype: registry.npmmirror.com/domelementtype/2.2.0
@@ -353,7 +353,7 @@ packages:
     dependencies:
       dom-serializer: registry.npmmirror.com/dom-serializer/1.3.2
       domelementtype: registry.npmmirror.com/domelementtype/2.2.0
-      domhandler: registry.npmmirror.com/domhandler/4.3.0
+      domhandler: registry.npmmirror.com/domhandler/4.3.1
     dev: true
 
   registry.npmmirror.com/emmet/2.3.6:
@@ -690,7 +690,7 @@ packages:
     version: 7.2.0
     dependencies:
       domelementtype: registry.npmmirror.com/domelementtype/2.2.0
-      domhandler: registry.npmmirror.com/domhandler/4.3.0
+      domhandler: registry.npmmirror.com/domhandler/4.3.1
       domutils: registry.npmmirror.com/domutils/2.8.0
       entities: registry.npmmirror.com/entities/3.0.1
     dev: true
@@ -1059,10 +1059,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  registry.npmmirror.com/vscode-css-languageservice/5.1.13:
-    resolution: {integrity: sha512-FA0foqMzMmEoO0WJP+MjoD4dRERhKS+Ag+yBrtmWQDmw2OuZ1R/5FkvI/XdTkCpHmTD9VMczugpHRejQyTXCNQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-css-languageservice/-/vscode-css-languageservice-5.1.13.tgz}
+  registry.npmmirror.com/vscode-css-languageservice/5.2.0:
+    resolution: {integrity: sha512-FR5yDEfzbXJtYmZYrA7JWFcRSLHsJw3nv55XAmx7qdwRpFj9yy0ulKfN/NUUdiZW2jZU2fD/+Y4VJYPdafHDag==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-css-languageservice/-/vscode-css-languageservice-5.2.0.tgz}
     name: vscode-css-languageservice
-    version: 5.1.13
+    version: 5.2.0
     dependencies:
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.16.0
@@ -1070,10 +1070,10 @@ packages:
       vscode-uri: registry.npmmirror.com/vscode-uri/3.0.3
     dev: true
 
-  registry.npmmirror.com/vscode-html-languageservice/4.2.2:
-    resolution: {integrity: sha512-4ICwlpplGbiNQq6D/LZr4qLbPZuMmnSQeX/57UAYP7jD1LOvKeru4lVI+f6d6Eyd7uS46nLJ5DUY4AAlq35C0g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-html-languageservice/-/vscode-html-languageservice-4.2.2.tgz}
+  registry.npmmirror.com/vscode-html-languageservice/4.2.4:
+    resolution: {integrity: sha512-1HqvXKOq9WlZyW4HTD+0XzrjZoZ/YFrgQY2PZqktbRloHXVAUKm6+cAcvZi4YqKPVn05/CK7do+KBHfuSaEdbg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-html-languageservice/-/vscode-html-languageservice-4.2.4.tgz}
     name: vscode-html-languageservice
-    version: 4.2.2
+    version: 4.2.4
     dependencies:
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.16.0
@@ -1081,10 +1081,10 @@ packages:
       vscode-uri: registry.npmmirror.com/vscode-uri/3.0.3
     dev: true
 
-  registry.npmmirror.com/vscode-json-languageservice/4.2.0:
-    resolution: {integrity: sha512-XNawv0Vdy/sUK0S+hGf7cq/qsVAbIniGJr89TvZOqMCNJmpgKTy1e8PL1aWW0uy6BfWMG7vxa5lZb3ypuFtuGQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-json-languageservice/-/vscode-json-languageservice-4.2.0.tgz}
+  registry.npmmirror.com/vscode-json-languageservice/4.2.1:
+    resolution: {integrity: sha512-xGmv9QIWs2H8obGbWg+sIPI/3/pFgj/5OWBhNzs00BkYQ9UaB2F6JJaGB/2/YOZJ3BvLXQTC4Q7muqU25QgAhA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-json-languageservice/-/vscode-json-languageservice-4.2.1.tgz}
     name: vscode-json-languageservice
-    version: 4.2.0
+    version: 4.2.1
     dependencies:
       jsonc-parser: registry.npmmirror.com/jsonc-parser/3.0.0
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
@@ -1100,13 +1100,13 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
-  registry.npmmirror.com/vscode-languageserver-protocol/3.17.0-next.15:
-    resolution: {integrity: sha512-73LffxyP/0TRyk3J7bCYt0BuFBzk4Qvo5TqZndOsP+uBDbRV4IT7ebu4M/XoPDSCyZ+jDIxW7if/JbhBznmwBg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.0-next.15.tgz}
+  registry.npmmirror.com/vscode-languageserver-protocol/3.17.0-next.16:
+    resolution: {integrity: sha512-tx4DnXw9u3N7vw+bx6n2NKp6FoxoNwiP/biH83AS30I2AnTGyLd7afSeH6Oewn2E8jvB7K15bs12sMppkKOVeQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.0-next.16.tgz}
     name: vscode-languageserver-protocol
-    version: 3.17.0-next.15
+    version: 3.17.0-next.16
     dependencies:
       vscode-jsonrpc: registry.npmmirror.com/vscode-jsonrpc/8.0.0-next.7
-      vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.17.0-next.8
+      vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.17.0-next.9
     dev: true
 
   registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4:
@@ -1121,19 +1121,19 @@ packages:
     version: 3.16.0
     dev: true
 
-  registry.npmmirror.com/vscode-languageserver-types/3.17.0-next.8:
-    resolution: {integrity: sha512-Mwj+FemiEk4QUUms1GGvXwDC+laJGVFuA4glbMVJTxfXdfOFZaEuyVlLobjccBo+NzD+5oEzzejTX7nWGNajjQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-languageserver-types/-/vscode-languageserver-types-3.17.0-next.8.tgz}
+  registry.npmmirror.com/vscode-languageserver-types/3.17.0-next.9:
+    resolution: {integrity: sha512-9/PeDNPYduaoXRUzYpqmu4ZV9L01HGo0wH9FUt+sSHR7IXwA7xoXBfNUlv8gB9H0D2WwEmMomSy1NmhjKQyn3A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-languageserver-types/-/vscode-languageserver-types-3.17.0-next.9.tgz}
     name: vscode-languageserver-types
-    version: 3.17.0-next.8
+    version: 3.17.0-next.9
     dev: true
 
-  registry.npmmirror.com/vscode-languageserver/8.0.0-next.9:
-    resolution: {integrity: sha512-PO+ijJdI9NGXklkZlvEHLpVloBd0iBiOi2EXuh2QfT4bOlx2qvsWu+nBISuw0X8ZfXA4grtaPPGcrXudmlezLg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-languageserver/-/vscode-languageserver-8.0.0-next.9.tgz}
+  registry.npmmirror.com/vscode-languageserver/8.0.0-next.10:
+    resolution: {integrity: sha512-sdjldl9ipuBSWVw5ENVMRcOVQwF0o+J6+lNA7FrB8MiLmzflnfjRoJMqA5tCEY8S/J/+P56ZR/dqiQnRYg5m8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-languageserver/-/vscode-languageserver-8.0.0-next.10.tgz}
     name: vscode-languageserver
-    version: 8.0.0-next.9
+    version: 8.0.0-next.10
     hasBin: true
     dependencies:
-      vscode-languageserver-protocol: registry.npmmirror.com/vscode-languageserver-protocol/3.17.0-next.15
+      vscode-languageserver-protocol: registry.npmmirror.com/vscode-languageserver-protocol/3.17.0-next.16
     dev: true
 
   registry.npmmirror.com/vscode-nls/5.0.0:
@@ -1154,7 +1154,7 @@ packages:
       '@volar/transforms': registry.npmmirror.com/@volar/transforms/0.29.8
       pug-lexer: registry.npmmirror.com/pug-lexer/5.0.1
       pug-parser: registry.npmmirror.com/pug-parser/6.0.0
-      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.9
+      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.10
     dev: true
 
   registry.npmmirror.com/vscode-typescript-languageservice/0.29.8:
@@ -1166,7 +1166,7 @@ packages:
       '@volar/shared': registry.npmmirror.com/@volar/shared/0.29.8
       semver: registry.npmmirror.com/semver/7.3.5
       upath: registry.npmmirror.com/upath/2.0.1
-      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.9
+      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.10
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
     dev: true
 
@@ -1199,10 +1199,10 @@ packages:
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.31
       request-light: registry.npmmirror.com/request-light/0.5.7
       upath: registry.npmmirror.com/upath/2.0.1
-      vscode-css-languageservice: registry.npmmirror.com/vscode-css-languageservice/5.1.13
-      vscode-html-languageservice: registry.npmmirror.com/vscode-html-languageservice/4.2.2
-      vscode-json-languageservice: registry.npmmirror.com/vscode-json-languageservice/4.2.0
-      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.9
+      vscode-css-languageservice: registry.npmmirror.com/vscode-css-languageservice/5.2.0
+      vscode-html-languageservice: registry.npmmirror.com/vscode-html-languageservice/4.2.4
+      vscode-json-languageservice: registry.npmmirror.com/vscode-json-languageservice/4.2.1
+      vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.10
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
       vscode-pug-languageservice: registry.npmmirror.com/vscode-pug-languageservice/0.29.8
       vscode-typescript-languageservice: registry.npmmirror.com/vscode-typescript-languageservice/0.29.8
@@ -1240,7 +1240,7 @@ packages:
     version: 7.0.2
     engines: {node: '>= 10.0.0'}
     dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.7
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.17.8
       '@babel/types': registry.npmmirror.com/@babel/types/7.17.0
       assert-never: registry.npmmirror.com/assert-never/1.2.1
       babel-walk: registry.npmmirror.com/babel-walk/3.0.0-canary-5
