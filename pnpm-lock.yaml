@@ -8,6 +8,7 @@ specifiers:
   eslint: ^8.11.0
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-vue: ^8.5.0
+  husk: ^0.5.3
   lodash: ^4.17.21
   prettier: ^2.6.0
   typescript: ^4.5.4
@@ -27,6 +28,7 @@ devDependencies:
   eslint: registry.npmmirror.com/eslint/8.11.0
   eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.0.0_eslint@8.11.0+prettier@2.6.0
   eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/8.5.0_eslint@8.11.0
+  husk: registry.npmmirror.com/husk/0.5.3
   prettier: registry.npmmirror.com/prettier/2.6.0
   typescript: registry.npmmirror.com/typescript/4.6.2
   vite: registry.npmmirror.com/vite/2.8.6
@@ -752,6 +754,14 @@ packages:
     resolution: {integrity: sha512-TaTivMB6pYI1kXwrFlEhLeGfOqoDNdTxjCdwRfFFkEA30Eu+k48W34nlok2EYWJfFFzqaEmichdNM7th6M5HNw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/assert-never/-/assert-never-1.2.1.tgz}
     name: assert-never
     version: 1.2.1
+    dev: true
+
+  registry.npmmirror.com/async-stream-flow/1.0.2:
+    resolution: {integrity: sha512-Iy1ynz7dKRhlvypxRm3zLbPDJsYaeKOQRfxRhZEM3ZZCNq3N0jR/T6KRUJxWVf9AHi5ynj/Wp4L7gATeLGSW9g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/async-stream-flow/-/async-stream-flow-1.0.2.tgz}
+    name: async-stream-flow
+    version: 1.0.2
+    dependencies:
+      through3: registry.npmmirror.com/through3/1.1.6
     dev: true
 
   registry.npmmirror.com/babel-walk/3.0.0-canary-5:
@@ -1578,6 +1588,15 @@ packages:
     version: 3.2.5
     dev: true
 
+  registry.npmmirror.com/fs-flow/1.0.2:
+    resolution: {integrity: sha512-AUYZEh7fNmZFHm8w2S4rs0oaJg0l/a8AXLAAFqu/ulmpbPoIxkovrfw/j9GcAYxIc3Oj7eRIibTX82s5+nCtag==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fs-flow/-/fs-flow-1.0.2.tgz}
+    name: fs-flow
+    version: 1.0.2
+    dependencies:
+      async-stream-flow: registry.npmmirror.com/async-stream-flow/1.0.2
+      through3: registry.npmmirror.com/through3/1.1.6
+    dev: true
+
   registry.npmmirror.com/fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fs.realpath/-/fs.realpath-1.0.0.tgz}
     name: fs.realpath
@@ -1732,6 +1751,67 @@ packages:
       domhandler: registry.npmmirror.com/domhandler/4.3.1
       domutils: registry.npmmirror.com/domutils/2.8.0
       entities: registry.npmmirror.com/entities/3.0.1
+    dev: true
+
+  registry.npmmirror.com/husk-async/1.0.3:
+    resolution: {integrity: sha512-VW6/vJKdnhbybdeh4e0ITZ1azI50xmTUrfBSuZhOcTxTOyinJLt1/RsegJXmK+c92MzcOr9WsOJpSt6EZW11xg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husk-async/-/husk-async-1.0.3.tgz}
+    name: husk-async
+    version: 1.0.3
+    dependencies:
+      async-stream-flow: registry.npmmirror.com/async-stream-flow/1.0.2
+    dev: true
+
+  registry.npmmirror.com/husk-core/1.0.4:
+    resolution: {integrity: sha512-duZv9ZJFlUt44vwEGLW1HvnzL9kS6AQklydtOYRJ4BT9O9aZ1Aixtt0sBv7b2dTicchYMpSkdJJNVpC8BKT0cA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husk-core/-/husk-core-1.0.4.tgz}
+    name: husk-core
+    version: 1.0.4
+    dependencies:
+      husk-print: registry.npmmirror.com/husk-print/1.0.3
+      husk-through: registry.npmmirror.com/husk-through/1.0.2
+    dev: true
+
+  registry.npmmirror.com/husk-exec/1.0.4:
+    resolution: {integrity: sha512-eHZH+pYbDGFZXxvvvUhi0Jj8QA4963XpjuYk11ytK/oF2LcLGp9dzng7OUytHa9Y+EucdfGl+7js9Klurwntyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husk-exec/-/husk-exec-1.0.4.tgz}
+    name: husk-exec
+    version: 1.0.4
+    dependencies:
+      process-flow: registry.npmmirror.com/process-flow/1.0.2
+    dev: true
+
+  registry.npmmirror.com/husk-fs/1.0.3:
+    resolution: {integrity: sha512-OizyOaE/FlV/11SOWUOvgBmIvZD3/bGghKQafzNtq4I6VePWZ2kH3q1zuck1cLfhOcYztdVdZaOaRC+rFHOcBg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husk-fs/-/husk-fs-1.0.3.tgz}
+    name: husk-fs
+    version: 1.0.3
+    dependencies:
+      fs-flow: registry.npmmirror.com/fs-flow/1.0.2
+    dev: true
+
+  registry.npmmirror.com/husk-print/1.0.3:
+    resolution: {integrity: sha512-paJ8IGpFoS9vKdWHS4tqtiwoF6dX48Il4z1/yP+9ulEwm6RTpC42mkKAj6MtD+CIYAxCLAwYvkTwMqh1Vg/KWg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husk-print/-/husk-print-1.0.3.tgz}
+    name: husk-print
+    version: 1.0.3
+    dependencies:
+      print-flow: registry.npmmirror.com/print-flow/1.0.2
+    dev: true
+
+  registry.npmmirror.com/husk-through/1.0.2:
+    resolution: {integrity: sha512-hm0xz/MkfZDxHm0PFm07sb+FuHTHCtPHeXNcBtf0Kl/vKx2hQoliYU1NC5JVjO+fe79z4uCBfI9/l3rFctIFwg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husk-through/-/husk-through-1.0.2.tgz}
+    name: husk-through
+    version: 1.0.2
+    dependencies:
+      through-flow: registry.npmmirror.com/through-flow/1.0.2
+    dev: true
+
+  registry.npmmirror.com/husk/0.5.3:
+    resolution: {integrity: sha512-4rLByTytY2LtiuyiRQ20C4AmSZ0+/imh1557r92TFcgAgeTgcsVwHlGLi2nO4QNiEKhvhlPj9HuCjKWfwNtwYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/husk/-/husk-0.5.3.tgz}
+    name: husk
+    version: 0.5.3
+    dependencies:
+      husk-async: registry.npmmirror.com/husk-async/1.0.3
+      husk-core: registry.npmmirror.com/husk-core/1.0.4
+      husk-exec: registry.npmmirror.com/husk-exec/1.0.4
+      husk-fs: registry.npmmirror.com/husk-fs/1.0.3
+      zephyr: registry.npmmirror.com/zephyr/1.2.8
     dev: true
 
   registry.npmmirror.com/ignore/5.2.0:
@@ -2104,6 +2184,22 @@ packages:
     hasBin: true
     dev: true
 
+  registry.npmmirror.com/print-flow/1.0.2:
+    resolution: {integrity: sha512-yg5dgWP8pvtV0vWEQNXP47Nwnmt+3gOJg0EgH6mXfrUUlz/fVX7Xkif5gGMiSDMq3QGwswE3RoTlgzSMpRLs1g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/print-flow/-/print-flow-1.0.2.tgz}
+    name: print-flow
+    version: 1.0.2
+    dependencies:
+      through3: registry.npmmirror.com/through3/1.1.6
+    dev: true
+
+  registry.npmmirror.com/process-flow/1.0.2:
+    resolution: {integrity: sha512-MJGNN728wtacWIPgp+bsUKwtNX9aKOw2HZVD+jrnZkTMCf4jrhvZnZnEaz6NUHKEy7rEFmz6sVDmz7O2k06xvQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/process-flow/-/process-flow-1.0.2.tgz}
+    name: process-flow
+    version: 1.0.2
+    dependencies:
+      through3: registry.npmmirror.com/through3/1.1.6
+    dev: true
+
   registry.npmmirror.com/promise/7.3.1:
     resolution: {integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/promise/-/promise-7.3.1.tgz}
     name: promise
@@ -2421,6 +2517,20 @@ packages:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/text-table/-/text-table-0.2.0.tgz}
     name: text-table
     version: 0.2.0
+    dev: true
+
+  registry.npmmirror.com/through-flow/1.0.2:
+    resolution: {integrity: sha512-j6IAxjqlbQAdQ45aQ2qw/TLdOsh3mzsaOtnMnw2ceW6N+zowlQZX3EXLhnqoa6Sz+NUdZdxzAEQhLTXSXHVoNw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/through-flow/-/through-flow-1.0.2.tgz}
+    name: through-flow
+    version: 1.0.2
+    dependencies:
+      through3: registry.npmmirror.com/through3/1.1.6
+    dev: true
+
+  registry.npmmirror.com/through3/1.1.6:
+    resolution: {integrity: sha512-cSNSymbXysQi89APpy7jNbrIcf28sU9zeQhXju9/87Bq/FmTjZRABw9FP4HIGWD2XO9J5zHqjyTaRPeR1/ctwg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/through3/-/through3-1.1.6.tgz}
+    name: through3
+    version: 1.1.6
     dev: true
 
   registry.npmmirror.com/to-fast-properties/2.0.0:
@@ -2777,4 +2887,10 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/yallist/-/yallist-4.0.0.tgz}
     name: yallist
     version: 4.0.0
+    dev: true
+
+  registry.npmmirror.com/zephyr/1.2.8:
+    resolution: {integrity: sha512-Evw01lEec5dp3gUlyKrCSRlZpcO2FpRq+SgpA1Ha9YgGKY2kFkGh6S3nVgzCagN9HtD//vmET/fQzojiK+NYog==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zephyr/-/zephyr-1.2.8.tgz}
+    name: zephyr
+    version: 1.2.8
     dev: true
