@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import AComponent, { Props } from './components/AComponent.vue'
-
-const props: Props = {
-  worker: 'TypeScript',
-}
-
+import AComponent from './components/AComponent.vue'
 </script>
 
 <template>
-  <AComponent v-bind="props" />
+  <AComponent task="Validate props" worker="Vue with TypeScript" />
 </template>
