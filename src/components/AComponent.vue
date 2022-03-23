@@ -29,7 +29,7 @@ export default defineComponent({
   // ),
   // setup(customProps) {
   //   /** define props
-  //    * defaultsdeep will change the proxy original object returned by `toRaw`
+  //    * `defaultsdeep` will change the proxy original object returned by `toRaw`.
   //    * However, this change will not lead to component updates.
   //    * So need to return
   //    */
@@ -44,7 +44,7 @@ export default defineComponent({
     const propsFromAttrs = pick(context.attrs, Object.keys(props))
 
     /** remove props in attrs
-     * fail: `context.attrs` is read-only.
+     * Fail: `context.attrs` is read-only.
      * An imperfect alternative is set `inheritAttrs` to `false`.
      */
     // context.attrs = omit(context.attrs, propsFromAttributes)
