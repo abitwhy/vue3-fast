@@ -4,7 +4,12 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-essential', '@vue/prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-essential',
+    '@vue/prettier',
+    './temp/.eslintrc-global.json',
+  ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
     requireConfigFile: false,

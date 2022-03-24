@@ -1,4 +1,4 @@
 node_modules
 dist
 !.*
-auto-imports.d.ts
+src/auto-imports.d.ts
