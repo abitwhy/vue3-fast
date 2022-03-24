@@ -1,3 +1,3 @@
 <template>
-  <AComponent task="Validate props" worker="Vue with TypeScript" />
+  <router-view />
 </template>
