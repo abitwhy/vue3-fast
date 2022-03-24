@@ -13,8 +13,11 @@ export default defineConfig({
         // presets
         'vue',
       ],
+      dts: 'src/auto-imports.d.ts',
     }),
-    Components(),
+    Components({
+      dts: 'src/auto-imports.d.ts',
+    }),
     Pages({
       extensions: ['vue'],
       exclude: ['**/components/*.vue'],
