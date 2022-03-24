@@ -6,12 +6,12 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "precommit": "eslint --fix",
+    "pre-commit": "eslint --fix",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,vue}": [
-      "npm run precommit",
+      "npm run pre-commit",
       "git add"
     ]
   },
