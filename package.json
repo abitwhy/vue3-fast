@@ -17,8 +17,10 @@
     ]
   },
   "dependencies": {
+    "css-doodle": "^0.26.3",
     "lodash": "^4.17.21",
     "pinia": "^2.0.12",
+    "sass": "^1.49.9",
     "vue": "^3.2.25",
     "vue-router": "^4.0.14"
   },
