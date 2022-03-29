@@ -3,6 +3,7 @@ module.exports = {
   env: {
     node: true,
     jest: true,
+    'vue/setup-compiler-macros': true,
   },
   extends: [
     'eslint:recommended',
@@ -13,11 +14,6 @@ module.exports = {
   parserOptions: {
     parser: '@typescript-eslint/parser',
     requireConfigFile: false,
-  },
-  globals: {
-    // vue 编译器宏
-    defineProps: true,
-    defineExpose: true,
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
