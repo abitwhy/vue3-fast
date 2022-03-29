@@ -8,5 +8,7 @@ interface Props {
   worker: 'Vue' | 'TypeScript' | string
 }
 
-defineProps<Props>()
+withDefaults(defineProps<Props>(), {
+  task: 'Validate props',
+})
 </script>
