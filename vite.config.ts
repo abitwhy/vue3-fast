@@ -26,7 +26,7 @@ export default defineConfig({
       },
     }),
     Components({
-      dts: 'src/components.d.ts',
+      dts: 'src/components/index.d.ts',
     }),
     Pages({
       extensions: ['vue'],
