@@ -30,7 +30,7 @@ export default defineConfig({
     }),
     Pages({
       extensions: ['vue'],
-      exclude: ['**/-/*.vue'],
+      exclude: ['**/-/**'],
     }),
   ],
 })
