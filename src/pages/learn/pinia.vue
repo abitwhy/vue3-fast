@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { useModel } from '~/stores/app'
+
 const app = useModel()
-const model = ref(app.MODEL)
-const { models, SET_MODEL } = app
+const model = ref(app.model)
+const { MODELS: models, SET_MODEL } = app
 
 watchEffect(() => {
   SET_MODEL(model.value)

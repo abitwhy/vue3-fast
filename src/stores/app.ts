@@ -5,23 +5,32 @@ import { defineStore } from 'pinia'
  * 例如：人们希望应用更精简？更详细？或者更适合老年人等
  */
 export const useModel = defineStore('app', () => {
-  // 可选模式
-  // 使用数组以供外部使用，通过使用常量断言实现
-  // 常量断言可将常量断言为常量字面量
-  // 方式一：
-  // const models = ['simple', 'normal', 'rich'] as const
-  // 方式二：
-  const models = <const>['simple', 'normal', 'rich']
-  // 类型声明
-  type Model = typeof models[number]
-  // 实例
-  const MODEL = ref<Model>('normal')
+  /** 可选模式
+   *
+   * @note 同时供外部和内部类型声明公用
+   * 使用数组以供外部使用，使用常量断言供内部类型声明使用
+   * 常量断言可将常量断言为常量字面量
+   * 方式一
+   * const MODELS = ['simple', 'normal', 'rich'] as const
+   * 方式二
+   */
+  const MODELS = <const>['simple', 'normal', 'rich']
+  /** 实例
+   *
+   * @note 为什么使用带 `_` 前缀的变量名
+   * 因为在公开函数 SET_MODEL 中，参数名会和本实例名冲突
+   * 为了公开函数的易用性，参考相关的命名规则，对其添加了 `_` 前缀
+   */
+  // type Model = typeof MODELS[number]
+  type UnionIn<T extends readonly any[]> = T[number]
+  type Model = UnionIn<typeof MODELS>
+  const _model = ref<Model>('normal')
 
   const SET_MODEL = (model: Model) => {
-    MODEL.value = model
+    _model.value = model
   }
 
-  return { MODEL, SET_MODEL, models }
+  return { model: _model, SET_MODEL, MODELS }
 })
 
 // todo：设计一个使用命令设计模式的状态
