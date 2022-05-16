@@ -1,9 +1,3 @@
-<script setup lang="ts">
-const backgrounds = <const>['net', 'leaves', 'circle', 'window']
-type Background = typeof backgrounds[number]
-const background = ref<Background>('net')
-</script>
-
 <template>
   <css-doodle :key="background" :class="background" use="var(--rule)">
   </css-doodle>
@@ -13,6 +7,12 @@ const background = ref<Background>('net')
     </option>
   </select>
 </template>
+
+<script setup lang="ts">
+const backgrounds = <const>['net', 'leaves', 'circle', 'window']
+type Background = typeof backgrounds[number]
+const background = ref<Background>('net')
+</script>
 
 <style lang="scss">
 // prettier-ignore

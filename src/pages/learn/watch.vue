@@ -1,5 +1,16 @@
+<template>
+  <button @click="numbers.push(numbers[numbers.length - 1] + 1)">push</button>
+  <p>
+    <code>
+      {{ numbers }}
+    </code>
+  </p>
+  <input v-model="state.attributes.name" type="text" />
+</template>
+
 <script setup lang="ts">
 import { cloneDeep } from 'lodash'
+
 // 侦听响应式对象
 const numbers = reactive([1, 2, 3, 4])
 watch(
@@ -31,13 +42,3 @@ watch(
   { deep: true }
 )
 </script>
-
-<template>
-  <button @click="numbers.push(numbers[numbers.length - 1] + 1)">push</button>
-  <p>
-    <code>
-      {{ numbers }}
-    </code>
-  </p>
-  <input v-model="state.attributes.name" type="text" />
-</template>
