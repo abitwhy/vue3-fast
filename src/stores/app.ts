@@ -5,7 +5,7 @@ import { defineStore } from 'pinia'
  * 例如：人们希望应用更精简？更详细？或者更适合老年人等
  */
 export const useModel = defineStore('app', () => {
-  /** 可选模式
+  /** 可用模式
    *
    * @note 同时供外部和内部类型声明公用
    * 使用数组以供外部使用，使用常量断言供内部类型声明使用
