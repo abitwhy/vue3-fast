@@ -11,10 +11,11 @@ export const useModel = defineStore('app', () => {
    * 使用数组以供外部使用，使用常量断言供内部类型声明使用
    * 常量断言可将常量断言为常量字面量
    * 方式一
-   * const MODELS = ['simple', 'normal', 'rich'] as const
-   * 方式二
+   * const MODELS = <const>['simple', 'normal', 'rich']
+   * 方式二（推荐）
+   * 理由是这种写法更通用，以及更易与泛型类型声明相区别（以便于将来移除临时断言）
    */
-  const MODELS = <const>['simple', 'normal', 'rich']
+  const MODELS = ['simple', 'normal', 'rich'] as const
   /** 实例
    *
    * @note 为什么使用带 `_` 前缀的变量名
