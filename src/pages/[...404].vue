@@ -1,0 +1,12 @@
+<script setup lang="ts">
+const url = window.location.href
+</script>
+
+<template>
+  <h1>Sorry, page does not existed.</h1>
+  <code>{{ url }}</code> is an invalid URL. Please check your input.
+  <p>
+    <button @click="$router.go(-1)">Go Back</button>
+    <button @click="$router.push('/')">Go Home</button>
+  </p>
+</template>
