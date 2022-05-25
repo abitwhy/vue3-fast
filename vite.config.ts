@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import path from 'path'
+import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Pages from 'vite-plugin-pages'
-import path from 'path'
+import Markdown from 'vite-plugin-md'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +14,9 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue(),
+    Vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     AutoImport({
       imports: [
         // presets
@@ -26,11 +29,14 @@ export default defineConfig({
       },
     }),
     Components({
+      extensions: ['vue', 'md'],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components/index.d.ts',
     }),
     Pages({
-      extensions: ['vue'],
+      extensions: ['vue', 'md'],
       exclude: ['**/-/**'],
     }),
+    Markdown(),
   ],
 })
