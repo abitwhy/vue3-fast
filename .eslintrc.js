@@ -9,7 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:vue/vue3-essential',
     '@vue/prettier',
-    './temp/.eslintrc-global.json',
+    './.eslintrc-global.json',
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
