@@ -27,5 +27,8 @@ module.exports = {
 
     // prettier
     'prettier/prettier': 'error',
+
+    // typescript
+    'no-undef': 'off',
   },
 }

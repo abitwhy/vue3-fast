@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
 /** 模式
  * 不同模式适应人们的不同需求
@@ -23,8 +24,7 @@ export const useModel = defineStore('app', () => {
    * 为了公开函数的易用性，参考相关的命名规则，对其添加了 `_` 前缀
    */
   // type Model = typeof MODELS[number]
-  type UnionIn<T extends readonly any[]> = T[number]
-  type Model = UnionIn<typeof MODELS>
+  type Model = UnionOf<typeof MODELS>
   const _model = ref<Model>('normal')
 
   const SET_MODEL = (model: Model) => {
