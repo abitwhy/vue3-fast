@@ -4,6 +4,8 @@ import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-md'
+import MarkdownItPrism from 'markdown-it-prism'
+import MarkdownItLinkAttributes from 'markdown-it-link-attributes'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -25,6 +27,17 @@ export default defineConfig({
       extensions: ['vue', 'md'],
       exclude: ['**/-/**'],
     }),
-    Markdown(),
+    Markdown({
+      markdownItUses: [MarkdownItPrism],
+      markdownItSetup(md) {
+        md.use(MarkdownItLinkAttributes, {
+          matcher: (link: string) => /^https?:\/\//.test(link),
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
+        })
+      },
+    }),
   ],
 })

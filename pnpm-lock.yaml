@@ -8,12 +8,15 @@ specifiers:
   '@typescript-eslint/parser': ^5.16.0
   '@vitejs/plugin-vue': ^2.2.0
   '@vue/eslint-config-prettier': ^7.0.0
+  '@vueuse/head': ^0.7.6
   css-doodle: ^0.26.3
   eslint: ^8.11.0
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-vue: ^8.5.0
   husk: ^0.5.3
   lodash: ^4.17.21
+  markdown-it-link-attributes: ^4.0.0
+  markdown-it-prism: ^2.2.4
   pinia: ^2.0.12
   prettier: ^2.6.0
   sass: ^1.49.9
@@ -27,6 +30,7 @@ specifiers:
   vue-tsc: ^0.29.8
 
 dependencies:
+  '@vueuse/head': registry.npmmirror.com/@vueuse/head/0.7.6_vue@3.2.31
   css-doodle: registry.npmmirror.com/css-doodle/0.26.3
   lodash: registry.npmmirror.com/lodash/4.17.21
   pinia: registry.npmmirror.com/pinia/2.0.12_5bgd5bbqiynntouprdo6x2bjeu
@@ -46,6 +50,8 @@ devDependencies:
   eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.0.0_yawwklhkzo66vfwuyidurf6rry
   eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/8.5.0_eslint@8.11.0
   husk: registry.npmmirror.com/husk/0.5.3
+  markdown-it-link-attributes: registry.npmmirror.com/markdown-it-link-attributes/4.0.0
+  markdown-it-prism: registry.npmmirror.com/markdown-it-prism/2.2.4
   prettier: registry.npmmirror.com/prettier/2.6.0
   typescript: registry.npmmirror.com/typescript/4.6.2
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.18.4_vite@2.8.6+vue@3.2.31
@@ -1026,6 +1032,17 @@ packages:
     name: '@vue/shared'
     version: 3.2.36
     dev: true
+
+  registry.npmmirror.com/@vueuse/head/0.7.6_vue@3.2.31:
+    resolution: {integrity: sha512-cOWqCkT3WiF5oEpw+VVEWUJd9RLD5rc7DmnFp3cePsejp+t7686uKD9Z9ZU7Twb7R/BI8iexKTmXo9D/F3v6UA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/head/-/head-0.7.6.tgz}
+    id: registry.npmmirror.com/@vueuse/head/0.7.6
+    name: '@vueuse/head'
+    version: 0.7.6
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.31
+    dev: false
 
   registry.npmmirror.com/JSONStream/1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/JSONStream/-/JSONStream-1.3.5.tgz}
@@ -3223,6 +3240,21 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  registry.npmmirror.com/markdown-it-link-attributes/4.0.0:
+    resolution: {integrity: sha512-ssjxSLlLfQBkX6BvAx1rCPrx7ZoK91llQQvS3P7KXvlbnVD34OUkfXwWecN7su/7mrI/HOW0RI5szdJOIqYC3w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it-link-attributes/-/markdown-it-link-attributes-4.0.0.tgz}
+    name: markdown-it-link-attributes
+    version: 4.0.0
+    dev: true
+
+  registry.npmmirror.com/markdown-it-prism/2.2.4:
+    resolution: {integrity: sha512-7oQVppKjiZqVQo7s7eLTIs3o/0hdvqAWDW8lvRel6eUCGD4iXjKbSZjvdHZFA2ZnCkQUF47kbvtWZDVQrv7zyQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it-prism/-/markdown-it-prism-2.2.4.tgz}
+    name: markdown-it-prism
+    version: 2.2.4
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      prismjs: registry.npmmirror.com/prismjs/1.28.0
+    dev: true
+
   registry.npmmirror.com/markdown-it/13.0.1:
     resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it/-/markdown-it-13.0.1.tgz}
     name: markdown-it
@@ -3632,6 +3664,13 @@ packages:
     version: 1.0.2
     dependencies:
       through3: registry.npmmirror.com/through3/1.1.6
+    dev: true
+
+  registry.npmmirror.com/prismjs/1.28.0:
+    resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/prismjs/-/prismjs-1.28.0.tgz}
+    name: prismjs
+    version: 1.28.0
+    engines: {node: '>=6'}
     dev: true
 
   registry.npmmirror.com/process-flow/1.0.2:
