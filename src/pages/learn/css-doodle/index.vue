@@ -9,6 +9,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
 const backgrounds = <const>['net', 'leaves', 'circle', 'window']
 type Background = typeof backgrounds[number]
 const background = ref<Background>('net')

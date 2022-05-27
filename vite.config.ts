@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import path from 'path'
 import Vue from '@vitejs/plugin-vue'
-import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-md'
@@ -16,17 +15,6 @@ export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
-    }),
-    AutoImport({
-      imports: [
-        // presets
-        'vue',
-      ],
-      dts: 'src/auto-imports.d.ts',
-      eslintrc: {
-        enabled: true,
-        filepath: './.eslintrc-global.json',
-      },
     }),
     Components({
       extensions: ['vue', 'md'],

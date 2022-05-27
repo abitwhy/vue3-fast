@@ -10,6 +10,7 @@
 
 <script setup lang="ts">
 import { cloneDeep } from 'lodash'
+import { reactive, watch } from 'vue'
 
 // 侦听响应式对象
 const numbers = reactive([1, 2, 3, 4])

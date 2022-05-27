@@ -7,6 +7,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onBeforeMount } from 'vue'
+
 const tsconfig = ref({})
 onBeforeMount(async () => {
   const res = await fetch('/tsconfig.json')

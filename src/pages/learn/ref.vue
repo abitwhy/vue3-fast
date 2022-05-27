@@ -6,6 +6,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, reactive } from 'vue'
+
 const count = ref(0)
 const obj = reactive({ count })
 </script>

@@ -8,6 +8,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watchEffect } from 'vue'
 import { useModel } from '~/stores/app'
 
 const app = useModel()
