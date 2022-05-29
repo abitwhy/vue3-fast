@@ -17,14 +17,14 @@ export const prismThemes = [
   'tomorrow',
   'twilight',
 ] as const
-// type UnionOf<T extends readonly any[]> = T[number]
+export type PeismThmes = UnionOf<typeof prismThemes>
 
 /** 配置函数
  *
  * @note 函数名没有以 `use` 开头，这与 VueUse 项目不一致
  * `use` 前缀很累赘，引入任何变量都是要“使用”它，不必再加到变量名之上
  */
-export const prism = (theme: UnionOf<typeof prismThemes>) =>
+export const prism = (theme: PeismThmes | undefined) =>
   useHead({
     link: [
       {
