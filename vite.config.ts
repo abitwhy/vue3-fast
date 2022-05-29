@@ -6,6 +6,8 @@ import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-md'
 import MarkdownItPrism from 'markdown-it-prism'
 import MarkdownItLinkAttributes from 'markdown-it-link-attributes'
+import MarkdownItAnchor from 'markdown-it-anchor'
+import Uslug from 'uslug'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,12 +32,22 @@ export default defineConfig({
     Markdown({
       markdownItUses: [MarkdownItPrism],
       markdownItSetup(md) {
-        md.use(MarkdownItLinkAttributes, {
-          matcher: (link: string) => /^https?:\/\//.test(link),
-          attrs: {
-            target: '_blank',
-            rel: 'noopener',
+        md.use(MarkdownItLinkAttributes, [
+          {
+            matcher: (href: string) => /^https?:\/\//.test(href),
+            attrs: {
+              target: '_blank',
+              rel: 'noopener',
+            },
           },
+        ])
+        md.use(MarkdownItAnchor, {
+          permalink: true,
+          permalinkBefore: true,
+          permalinkSymbol: '#',
+          permalinkClass: 'customPermalink',
+          permalinkSpace: false,
+          slugify: (s) => Uslug(s),
         })
       },
     }),
