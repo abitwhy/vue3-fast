@@ -1,0 +1,23 @@
+/* 根节点样式表 */
+
+// 用于设置全局 CSS 自定义属性
+// 见：[CSS 自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+
+// 注意：Sass 编译器不会将 Sass 变量赋给 CSS 自定义属性
+// 因此，无法利用预编译器的变量特性，赋值给属性值：
+// $author: 'abitwhy';
+// :root{
+//   --author: $author;
+// }
+
+// 但是仍然可以结合 Sass 变量，用给 CSS 变量名：
+// $sass-var-key: 'css-var-key';
+// :root {
+//   --#{$sass-var-key}: 'css-var-value';
+// }
+
+:root {
+  --author: 'abitwhy';
+}
+
+/* 根节点样式表结束 */

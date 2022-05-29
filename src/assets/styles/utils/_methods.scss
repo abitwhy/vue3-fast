@@ -1,0 +1,114 @@
+/** 函数库
+ * 收集常用且可标准化的 saas 函数/混入
+ */
+
+/** 位置居中
+ *
+ * @param $dir 居中方向
+ * @type 'xy'|'x'|'y'
+ *
+ * @param $type 居中方式
+ * @type 'position'|'flex'
+ * @note 若设置为 'flex' ，需在目标节点的上一级节点使用
+ */
+@mixin center($dir: 'xy', $type: 'position') {
+  @if $type == 'position' {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0s;
+    transform: translate(-50%);
+  } @else if $type == 'flex' {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @if $dir == 'x' {
+    top: unset;
+    align-items: unset;
+  } @else if $dir == 'y' {
+    left: unset;
+    justify-content: unset;
+  }
+}
+
+/** 粘性定位
+ * 
+ * @param $direction 粘粘方向
+ * @param $distance 距离粘粘方向起始端的距离
+ */
+@mixin sticky($direction: 'top', $distance: 0) {
+  position: sticky;
+  #{$direction}: $distance;
+  z-index: 1;
+}
+
+/** 省略式文字溢出隐藏
+ * 以省略号 `...` 标记的溢出隐藏
+ *
+ * @param $lines 行数/列数
+ *
+ * @note 元素必须有宽度/高度
+ * flex 布局通过 `flex: 1` 设置的元素也是有宽度/高度的
+ * 值得一提的是，`flex: 1` 等价于 `flex: 1 1 0` 而非 `flex: 1 1 auto`
+ * @see https://zhuanlan.zhihu.com/p/136223806
+ */
+@mixin ellipsis($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $lines > 1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+  } @else {
+    white-space: nowrap;
+  }
+}
+
+/** 升级版浮动布局
+ * float 和 flex 结合的布局，并且不脱离文档流
+ *
+ * @param $width 项目宽
+ * @type width
+ * @note 百分比尺寸在小屏将无法正常换行
+ * @note 在项目中另行设置绝对宽度会破坏布局效果
+ *
+ * @param $flex 共占剩余宽度比
+ * @type-link https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex_value
+ * 
+ * @todo 添加 $dir 支持竖向， 并同时添加 $height 和 $size
+ */
+@mixin floatX($width, $flex: false, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $width);
+  @if $flex {
+    grid-template-columns: repeat(auto-fill, minmax($width, $flex));
+  }
+  grid-gap: $gap;
+  justify-content: space-between;
+}
+
+/** 设置字体
+ * 
+ * @param $fonts 字体集合
+ * @type {[fontName: attrName]: url}[]
+ * @note 不支持 urlString
+ * sass 无法识别拼接的 urlString，也不具有表示当前路径全局变量（类似 NodeJS 的 `__dirname`）
+ * 所以只支持传入完整的 url，如：url(path/to/font)，而不能只传入 urlString 'path/to/font'
+ */
+@mixin setFont($fonts) {
+  @each $fontName, $url in $fonts {
+    @font-face {
+      font-family: $fontName;
+      src: local($fontName), $url;
+      // 浏览器显示字体的策略
+      // 避免显示不可见的文字
+      // @blog：https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools
+      font-display: swap;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @content;
+    }
+  }
+}

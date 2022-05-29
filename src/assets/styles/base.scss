@@ -1,0 +1,48 @@
+/* 项目定制标签样式表 */
+// 定制是指区别于浏览器默认标签样式
+// 因为暂时没有在不同浏览器统一样式的需求，所以其不同于重置样式，像 [minireset](https://raw.githubusercontent.com/jgthms/minireset.css/master/minireset.min.css)
+// 这是一个渐进的样式表，其最终将跳过重置样式表，成为项目的基础样式表
+
+body {
+  margin: 0;
+  padding: 8px;
+}
+
+img {
+  height: 100%;
+}
+
+figure {
+  cursor: pointer;
+}
+
+figcaption {
+  cursor: initial;
+  user-select: all;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 4px;
+}
+
+hr {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* 项目定制标签样式表结束 */
