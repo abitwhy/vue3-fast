@@ -1,14 +1,19 @@
-/** 纯继承（extend-only）的选择器
- *
- * @doc https://www.sass.hk/docs/#:~:text=7.3.6.%20%40extend%2DOnly%20%E9%80%89%E6%8B%A9%E5%99%A8%20(%40extend%2DOnly%20Selectors)
- */
+////
+/// 纯继承（[extend-only](https://www.sass.hk/docs/#:~:text=7.3.6.%20%40extend%2DOnly%20%E9%80%89%E6%8B%A9%E5%99%A8%20(%40extend%2DOnly%20Selectors))）的选择器
+/// @author [Abitwhy](https://github.com/abitwhy)
+////
 
-/** 正方形盒子
- * 仅由宽度决定的正方形盒子
- * 
- * @note 这是一种 hack 方式
- * 在 grid 布局中，给项目设置本类时，当项目没有独占一列时会失效
- */
+/// 正方形盒子
+///
+/// 仅由宽度决定的正方形盒子。
+///
+/// <details><summary>注意</summary>
+///
+/// - 这是一种 hack 方式
+/// - 在 grid 布局中，给项目设置本类时，当项目没有独占一列时会失效
+///
+/// </details>
+
 %square {
   width: 100%;
   &::after {

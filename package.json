@@ -9,11 +9,12 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "pre-commit": "eslint --fix",
-    "prepare": "npx husky install"
+    "prepare": "npx husky install",
+    "sassdoc": "sassdoc ./src/assets/styles/utils/**/*.scss"
   },
   "lint-staged": {
     "*.{ts,vue}": [
-      "npm run pre-commit",
+      "pnpm run pre-commit",
       "git add"
     ]
   },
@@ -44,6 +45,7 @@
     "markdown-it-link-attributes": "^4.0.0",
     "markdown-it-prism": "^2.2.4",
     "prettier": "^2.6.2",
+    "sassdoc": "^2.7.4",
     "typescript": "^4.7.2",
     "unplugin-vue-components": "^0.18.5",
     "uslug": "^1.0.4",

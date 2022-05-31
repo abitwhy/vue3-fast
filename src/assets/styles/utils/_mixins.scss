@@ -1,0 +1,193 @@
+////
+/// 混入库
+/// 收集常用且可标准化的 saas 混入。
+/// @author [Abitwhy](https://github.com/abitwhy)
+////
+
+/// 位置居中
+///
+/// @param {'xy'|'x'|'y'} $direction ['xy'] 居中方向
+///
+/// @param {'position'|'flex'} $type ['position'] 居中方式
+///
+/// 若设置为 'flex' ，需在目标节点的上一级节点使用
+
+@mixin center($direction: 'xy', $type: 'position') {
+  @if $type == 'position' {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0s;
+    transform: translate(-50%);
+  } @else if $type == 'flex' {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @if $direction == 'x' {
+    top: unset;
+    align-items: unset;
+  } @else if $direction == 'y' {
+    left: unset;
+    justify-content: unset;
+  }
+}
+
+/// 粘性定位
+///
+/// @param {'top'|'bottom'|'left'|'right'} $position ['top'] 粘粘位置
+///
+/// @param {'position'|'flex'} $distance [0] 距离粘粘位置起始端的距离
+
+@mixin sticky($position: 'top', $distance: 0) {
+  position: sticky;
+  #{$position}: $distance;
+  z-index: 1;
+}
+
+/// 以省略号 `...` 标记的溢出隐藏。
+///
+/// <details><summary>注意</summary>
+///
+/// **元素必须有宽度/高度**
+///
+/// flex 布局通过 `flex: 1` 设置的元素也是有宽度/高度的。
+/// 值得一提的是，`flex: 1` 等价于 `flex: 1 1 0` 而非 `flex: 1 1 auto`。
+/// 参见[知乎相关讨论](https://zhuanlan.zhihu.com/p/136223806)。
+///
+/// </details>
+///
+/// @param {number} $lines [1] 行数/列数
+
+@mixin ellipsis($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $lines > 1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+  } @else {
+    white-space: nowrap;
+  }
+}
+
+/// 升级版浮动布局
+///  float 和 flex 结合的布局，并且不脱离文档流
+///
+/// @param {typeof width} $width 项目宽
+///
+/// <details><summary>注意</summary>
+///
+/// - 百分比尺寸在小屏将无法正常换行
+/// - 在项目中另行设置绝对宽度会破坏布局效果
+///
+/// </details>
+///
+/// @param {Flex} $flex 共占剩余宽度比
+///
+/// _类型参考：[Flex](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex_value)_
+///
+/// @link https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex_value
+/// Flex
+///
+/// @param {typeof grid-gap} $gap [1rem] 项目间隔
+///
+/// @todo 添加 $direction 支持竖向， 并同时添加 $height 和 $size
+
+@mixin floatX($width, $flex: false, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $width);
+  @if $flex {
+    grid-template-columns: repeat(auto-fill, minmax($width, $flex));
+  }
+  grid-gap: $gap;
+  justify-content: space-between;
+}
+
+/** 设置字体
+ * 
+ * @param $fonts 字体集合
+ * @type {[fontName: attrName]: url}[]
+ * @note 不支持 urlString
+ * sass 无法识别拼接的 urlString，也不具有表示当前路径全局变量（类似 NodeJS 的 `__dirname`）
+ * 所以只支持传入完整的 url，如：url(path/to/font)，而不能只传入 urlString 'path/to/font'
+ */
+/// 设置字体
+///
+/// 并帮你做一些优化。
+///
+/// @param {Map(attr-name: typeof url)} $fonts 字体集合
+/// @content [Description]
+///
+/// @example scss 基本用法
+/// .somewhere {
+///   @include setFont(
+///     (
+///       font-name: url(path/to/font),
+///     )
+///   );
+/// }
+///
+/// @example scss 混入内容
+/// .somewhere {
+///   @include setFont(
+///     (
+///       font-name: url(path/to/font),
+///     )
+///   ) {
+///     // 自定义混入内容
+///     // 如：所需加载的字符编码范围
+///     unicode-range: U+30-39, U+61-7a, U+41-5a;
+///   }
+/// }
+///
+/// @output
+/// <details><summary>基本用法</summary>
+///
+/// ```css
+/// .somewhere {
+///   @font-face {
+///     font-family: font-name;
+///     src: local(font-name), url(path/to/font);
+///     font-display: swap;
+///     -webkit-font-smoothing: antialiased;
+///     -moz-osx-font-smoothing: grayscale;
+///   }
+/// }
+/// ```
+///
+/// </details>
+///
+/// <details><summary>混入内容</summary>
+///
+/// ```css
+/// .somewhere {
+///   @font-face {
+///     font-family: font-name;
+///     src: local(font-name), url(path/to/font);
+///     font-display: swap;
+///     -webkit-font-smoothing: antialiased;
+///     -moz-osx-font-smoothing: grayscale;
+///     unicode-range: U+30-39, U+61-7a, U+41-5a;
+///   }
+/// }
+/// ```
+///
+/// </details>
+
+@mixin setFont($fonts) {
+  @each $fontName, $url in $fonts {
+    @font-face {
+      font-family: $fontName;
+      src: local($fontName), $url;
+      // 浏览器显示字体的策略
+      // 避免显示不可见的文字
+      // @blog：https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools
+      font-display: swap;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @content;
+    }
+  }
+}

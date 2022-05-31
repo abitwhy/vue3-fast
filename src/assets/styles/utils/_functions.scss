@@ -1,0 +1,20 @@
+////
+/// 函数库
+/// 收集常用且可标准化的 saas 函数。
+/// @author [Abitwhy](https://github.com/abitwhy)
+////
+
+@use 'sass:string';
+
+/// 所有标题标签联合选择器。
+///
+/// @return {'h1,h2,h3,h4,h5,h6'} headers
+
+@function headers() {
+  $start: 1;
+  $headers: #{'h' + $start};
+  @for $i from $start + 1 through 6 {
+    $headers: string.insert($headers, #{',h' + $i}, 999);
+  }
+  @return $headers;
+}

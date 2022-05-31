@@ -1,0 +1,107 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Vue3-fast - v0.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Vue3-fast - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Vue3-fast - 0.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="headers" data-type="function"><a href="#undefined-function-headers">headers</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="center" data-type="mixin"><a href="#undefined-mixin-center">center</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sticky" data-type="mixin"><a href="#undefined-mixin-sticky">sticky</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="ellipsis" data-type="mixin"><a href="#undefined-mixin-ellipsis">ellipsis</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="floatX" data-type="mixin"><a href="#undefined-mixin-floatX">floatX</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="setFont" data-type="mixin"><a href="#undefined-mixin-setFont">setFont</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="square" data-type="placeholder"><a href="#undefined-placeholder-square">square</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-headers"><h3 class="item__heading"><a class="item__name" href="#function-headers">headers</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function headers() { 
+  $start: 1;
+  $headers: #{&#39;h&#39; + $start};
+  @for $i from $start + 1 through 6 {
+    $headers: string.insert($headers, #{&#39;,h&#39; + $i}, 999);
+  }
+  @return $headers;
+ }" data-collapsed="@function headers() { ... }"><code>@function headers() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>所有标题标签联合选择器。</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>'h1,h2,h3,h4,h5,h6'</code> &mdash;<p>headers</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p><a href="https://github.com/abitwhy">Abitwhy</a></p></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-center"><h3 class="item__heading"><a class="item__name" href="#mixin-center">center</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin center($direction: &#39;xy&#39;, $type: &#39;position&#39;) { 
+  @if $type == &#39;position&#39; {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0s;
+    transform: translate(-50%);
+  } @else if $type == &#39;flex&#39; {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @if $direction == &#39;x&#39; {
+    top: unset;
+    align-items: unset;
+  } @else if $direction == &#39;y&#39; {
+    left: unset;
+    justify-content: unset;
+  }
+ }" data-collapsed="@mixin center($direction: &#39;xy&#39;, $type: &#39;position&#39;) { ... }"><code>@mixin center($direction: &#39;xy&#39;, $type: &#39;position&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>位置居中</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>居中方向</p></td><td data-label="type"><code>'xy'</code> or <code>'x'</code> or <code>'y'</code></td><td data-label="default"><code>&#39;xy&#39;</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$type</code></th><td data-label="desc"><p>居中方式</p><p>若设置为 &#39;flex&#39; ，需在目标节点的上一级节点使用</p></td><td data-label="type"><code>'position'</code> or <code>'flex'</code></td><td data-label="default"><code>&#39;position&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p><a href="https://github.com/abitwhy">Abitwhy</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-sticky"><h3 class="item__heading"><a class="item__name" href="#mixin-sticky">sticky</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sticky($position: &#39;top&#39;, $distance: 0) { 
+  position: sticky;
+  #{$position}: $distance;
+  z-index: 1;
+ }" data-collapsed="@mixin sticky($position: &#39;top&#39;, $distance: 0) { ... }"><code>@mixin sticky($position: &#39;top&#39;, $distance: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>粘性定位</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$position</code></th><td data-label="desc"><p>粘粘位置</p></td><td data-label="type"><code>'top'</code> or <code>'bottom'</code> or <code>'left'</code> or <code>'right'</code></td><td data-label="default"><code>&#39;top&#39;</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$distance</code></th><td data-label="desc"><p>距离粘粘位置起始端的距离</p></td><td data-label="type"><code>'position'</code> or <code>'flex'</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p><a href="https://github.com/abitwhy">Abitwhy</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-ellipsis"><h3 class="item__heading"><a class="item__name" href="#mixin-ellipsis">ellipsis</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ellipsis($lines: 1) { 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $lines &gt; 1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+  } @else {
+    white-space: nowrap;
+  }
+ }" data-collapsed="@mixin ellipsis($lines: 1) { ... }"><code>@mixin ellipsis($lines: 1) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>以省略号 <code>...</code> 标记的溢出隐藏。</p><details><summary>注意</summary><p><strong>元素必须有宽度/高度</strong></p><p>flex 布局通过 <code>flex: 1</code> 设置的元素也是有宽度/高度的。 值得一提的是，<code>flex: 1</code> 等价于 <code>flex: 1 1 0</code> 而非 <code>flex: 1 1 auto</code>。 参见<a href="https://zhuanlan.zhihu.com/p/136223806">知乎相关讨论</a>。</p></details></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$lines</code></th><td data-label="desc"><p>行数/列数</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1</code></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p><a href="https://github.com/abitwhy">Abitwhy</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-floatX"><h3 class="item__heading"><a class="item__name" href="#mixin-floatX">floatX</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin floatX($width, $flex, $gap: 1rem) { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $width);
+  @if $flex {
+    grid-template-columns: repeat(auto-fill, minmax($width, $flex));
+  }
+  grid-gap: $gap;
+  justify-content: space-between;
+ }" data-collapsed="@mixin floatX($width, $flex, $gap: 1rem) { ... }"><code>@mixin floatX($width, $flex, $gap: 1rem) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>升级版浮动布局 float 和 flex 结合的布局，并且不脱离文档流</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>项目宽</p><details><summary>注意</summary><ul><li>百分比尺寸在小屏将无法正常换行</li><li>在项目中另行设置绝对宽度会破坏布局效果</li></ul></details></td><td data-label="type"><code>Typeof width</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$flex</code></th><td data-label="desc"><p>共占剩余宽度比</p><p><em>类型参考：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex_value">Flex</a></em></p></td><td data-label="type"><code>Flex</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$gap</code></th><td data-label="desc"><p>项目间隔</p></td><td data-label="type"><code>Typeof grid-gap</code></td><td data-label="default"><code>1rem</code></td></tr></tbody></table><h3 class="item__sub-heading">TODO's</h3><ul class="list-unstyled"><li><p>添加 $direction 支持竖向， 并同时添加 $height 和 $size</p></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex_value">Flex</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p><a href="https://github.com/abitwhy">Abitwhy</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-setFont"><h3 class="item__heading"><a class="item__name" href="#mixin-setFont">setFont</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin setFont($fonts) { 
+  @each $fontName, $url in $fonts {
+    @font-face {
+      font-family: $fontName;
+      src: local($fontName), $url;
+      // 浏览器显示字体的策略
+      // 避免显示不可见的文字
+      // @blog：https://web.dev/font-display/?utm_source=lighthouse&amp;utm_medium=devtools
+      font-display: swap;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin setFont($fonts) { ... }"><code>@mixin setFont($fonts) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>设置字体</p><p>并帮你做一些优化。</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$fonts</code></th><td data-label="desc"><p>字体集合</p></td><td data-label="type"><code>Map(attr-name: typeof url)</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>基本用法</p></div><pre class="example__code language-scss"><code>.somewhere {
+  @include setFont(
+    (
+      font-name: url(path/to/font),
+    )
+  );
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>混入内容</p></div><pre class="example__code language-scss"><code>.somewhere {
+  @include setFont(
+    (
+      font-name: url(path/to/font),
+    )
+  ) {
+    // 自定义混入内容
+    // 如：所需加载的字符编码范围
+    unicode-range: U+30-39, U+61-7a, U+41-5a;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><details><summary>基本用法</summary><pre><code class="language-css">.somewhere {
+  @font-face {
+    font-family: font-name;
+    src: local(font-name), url(path/to/font);
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}</code></pre></details><details><summary>混入内容</summary><pre><code class="language-css">.somewhere {
+  @font-face {
+    font-family: font-name;
+    src: local(font-name), url(path/to/font);
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    unicode-range: U+30-39, U+61-7a, U+41-5a;
+  }
+}</code></pre></details></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p><a href="https://github.com/abitwhy">Abitwhy</a></p></li></ul></section></section><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="undefined-placeholder-square"><h3 class="item__heading"><a class="item__name" href="#placeholder-square">square</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%square { 
+  width: 100%;
+  &amp;::after {
+    content: &#39;&#39;;
+    display: block;
+    height: 0;
+    // 通过 padding 撑出和宽度相同的高度
+    padding-bottom: 100%;
+    visibility: hidden;
+  }
+ }" data-collapsed="%square { ... }"><code>%square { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>正方形盒子</p><p>仅由宽度决定的正方形盒子。</p><details><summary>注意</summary><ul><li>这是一种 hack 方式</li><li>在 grid 布局中，给项目设置本类时，当项目没有独占一列时会失效</li></ul></details></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p><a href="https://github.com/abitwhy">Abitwhy</a></p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Vue3-fast</span><!-- Version --> <span class="project-info__version">- v0.0.0</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
