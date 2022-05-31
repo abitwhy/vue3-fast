@@ -1,3 +1,8 @@
+# auto generated
 node_modules
 dist
+# inline from '/vite.config.ts' -> 'unplugin-vue-components/vite' #options.dts
+components/index.d.ts 
+
+# formatless file
 !.*
