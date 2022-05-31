@@ -17,6 +17,7 @@ const numbers = reactive([1, 2, 3, 4])
 watch(
   () => [...numbers],
   (numbers, prevNumbers) => {
+    /* eslint-disable no-console */
     console.log(numbers, prevNumbers)
   }
 )

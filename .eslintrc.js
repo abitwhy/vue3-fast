@@ -11,8 +11,8 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'warn',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'warn',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     /**
      * @description 多词组件名
      * 规则：{@link https://eslint.vuejs.org/rules/multi-word-component-names.html}

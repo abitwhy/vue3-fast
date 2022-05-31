@@ -21,11 +21,7 @@ function toggleVisible() {
  * @doc https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API
  */
 let observer = new IntersectionObserver(
-  (entries, observer) => {
-    console.log({
-      entries,
-      observer,
-    })
+  () => {
     toggleVisible()
   },
   {
