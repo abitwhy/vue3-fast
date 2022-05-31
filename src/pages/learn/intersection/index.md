@@ -51,8 +51,8 @@ See [Disneyanimation FILMMAKING PROCESS](https://disneyanimation.com/process/).
 <!-- ## 示例 -->
 ## Sample
 
-<Example />
+<Sample />
 
 <script setup lang="ts">
-  import Example from './-/Example.vue';
+  import Sample from './-/Sample.vue';
 </script>
