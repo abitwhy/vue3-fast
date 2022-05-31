@@ -2,6 +2,7 @@
 // 定制是指区别于浏览器默认标签样式
 // 因为暂时没有在不同浏览器统一样式的需求，所以其不同于重置样式，像 [minireset](https://raw.githubusercontent.com/jgthms/minireset.css/master/minireset.min.css)
 // 这是一个渐进的样式表，其最终将跳过重置样式表，成为项目的基础样式表
+@use './utils/functions';
 
 body {
   margin: 0;
@@ -45,4 +46,21 @@ ul {
   box-sizing: inherit;
 }
 
+:not(:not(#{functions.headers()})) {
+  &:hover {
+    // 类名与 '/vite.config.ts' 中 markdown-it-anchor 的 `permalinkClass` 配置关联
+    > .anchor {
+      visibility: visible;
+    }
+  }
+  > .anchor {
+    visibility: hidden;
+    color: #3eaf7c;
+    font-size: smaller;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 /* 项目定制标签样式表结束 */

@@ -40,37 +40,9 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-@use '~/assets/styles/utils/functions';
-// @debug string.quote(Helvetica);
 header {
   position: sticky;
   top: 10px;
-}
-
-@function headers() {
-  $start: 1;
-  $headers: #{'h' + $start};
-  @for $i from $start + 1 through 6 {
-    $headers: string.insert($headers, #{', h' + $i}, 999);
-  }
-  @return $headers;
-}
-
-:not(:not(#{functions.headers()})) {
-  &:hover {
-    > .customPermalink {
-      visibility: visible;
-    }
-  }
-  > .customPermalink {
-    visibility: hidden;
-    color: #3eaf7c;
-    font-size: smaller;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 .outter {

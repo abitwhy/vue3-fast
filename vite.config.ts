@@ -45,7 +45,7 @@ export default defineConfig({
           permalink: true,
           permalinkBefore: true,
           permalinkSymbol: '#',
-          permalinkClass: 'customPermalink',
+          permalinkClass: 'anchor',
           permalinkSpace: false,
           slugify: (s) => Uslug(s),
         })
