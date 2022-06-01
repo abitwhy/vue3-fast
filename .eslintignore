@@ -1,8 +1,10 @@
 # auto generated
 node_modules
 dist
-# inline from '/vite.config.ts' -> 'unplugin-vue-components/vite' #options.dts
+# inline from file: `/vite.config.ts`, node: 'unplugin-vue-components/vite', param: `options.dts`
 components/index.d.ts 
+# inline from file: `/package.json`, option: `script.sassdoc`, refer to node: 'sassdoc', param: `source`
+sassdoc
 
 # formatless file
 !.*

@@ -7,7 +7,7 @@ import Markdown from 'vite-plugin-md'
 import MarkdownItPrism from 'markdown-it-prism'
 import MarkdownItLinkAttributes from 'markdown-it-link-attributes'
 import MarkdownItAnchor from 'markdown-it-anchor'
-import Uslug from 'uslug'
+// import Uslug from 'uslug'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -42,12 +42,7 @@ export default defineConfig({
           },
         ])
         md.use(MarkdownItAnchor, {
-          permalink: true,
-          permalinkBefore: true,
-          permalinkSymbol: '#',
-          permalinkClass: 'anchor',
-          permalinkSpace: false,
-          slugify: (s) => Uslug(s),
+          permalink: MarkdownItAnchor.permalink.headerLink(),
         })
       },
     }),

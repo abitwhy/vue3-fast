@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  padding: 8px;
+  padding: 0;
 }
 
 img {
@@ -46,20 +46,25 @@ ul {
   box-sizing: inherit;
 }
 
-:not(:not(#{functions.headers()})) {
+#app {
+  /// @todo use layout and move into
+  max-width: 1280px;
+  margin: 24px auto;
+  padding: 0 32px;
+}
+
+.header-anchor {
+  text-decoration: none;
+  color: #000;
   &:hover {
-    // 类名与 '/vite.config.ts' 中 markdown-it-anchor 的 `permalinkClass` 配置关联
-    > .anchor {
-      visibility: visible;
-    }
-  }
-  > .anchor {
-    visibility: hidden;
-    color: #3eaf7c;
-    font-size: smaller;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    text-decoration: underline;
+    &::after {
+      content: '#';
+      display: inline-block;
+      margin-left: 0.2em;
+      vertical-align: middle;
+      opacity: 0.2;
+      line-height: 1;
     }
   }
 }
