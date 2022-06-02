@@ -53,5 +53,10 @@
     "vite-plugin-md": "^0.13.1",
     "vite-plugin-pages": "^0.22.0",
     "vue-tsc": "^0.29.8"
-  }
+  },
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=7"
+  },
+  "packageManager": "pnpm@7.1.7"
 }
