@@ -4,6 +4,12 @@ import { ref } from 'vue'
 /** 模式
  * 不同模式适应人们的不同需求
  * 例如：人们希望应用更精简？更详细？或者更适合老年人等
+ *
+ * @note 为什么使用 use- 前缀？
+ * 为了避免命名冲突：
+ * 不能使用首字母大写 Model（这个写法留给了类型）
+ * 不能使用全大写 MODEL（不具有全局常量的含义，且这个写法留给了实例）
+ * 不能使用全小写 model（这个写法留给了赋值函数的参数，以及用户）
  */
 export const useModel = defineStore('app', () => {
   /** 可用模式
@@ -19,19 +25,20 @@ export const useModel = defineStore('app', () => {
   const MODELS = ['simple', 'normal', 'rich'] as const
   /** 实例
    *
-   * @note 为什么使用带 `_` 前缀的变量名
-   * 因为在公开函数 SET_MODEL 中，参数名会和本实例名冲突
-   * 为了公开函数的易用性，参考相关的命名规则，对其添加了 `_` 前缀
+   * @note 为什么名称用全局常量的写法（全大写）
+   * 实例是一个 ref，变化的是 value 属性，变化仅发生在某个组件内
+   * 但作为全局状态，它在各页面间是统一的，可理解为逻辑常量
+   * 这同时也规避了命名冲突，便于使用
    */
   // type Model = typeof MODELS[number]
   type Model = UnionOf<typeof MODELS>
-  const _model = ref<Model>('normal')
+  const MODEL = ref<Model>('normal')
 
   const SET_MODEL = (model: Model) => {
-    _model.value = model
+    MODEL.value = model
   }
 
-  return { model: _model, SET_MODEL, MODELS }
+  return { MODEL, SET_MODEL, MODELS }
 })
 
 // todo：设计一个使用命令设计模式的状态
