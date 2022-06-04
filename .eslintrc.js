@@ -5,10 +5,11 @@ module.exports = {
     jest: true,
     'vue/setup-compiler-macros': true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-essential'],
+  parser: 'vue-eslint-parser',
+  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'prettier'],
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    requireConfigFile: false,
+    sourceType: 'module',
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
@@ -24,9 +25,6 @@ module.exports = {
 
     // vue
     'vue/multi-word-component-names': 0,
-
-    // prettier
-    'prettier/prettier': 'error',
 
     // typescript
     'no-undef': 'off',
