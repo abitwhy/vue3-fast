@@ -5,7 +5,7 @@ module.exports = {
     jest: true,
     'vue/setup-compiler-macros': true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-essential', '@vue/prettier'],
+  extends: ['eslint:recommended', 'plugin:vue/vue3-essential'],
   parserOptions: {
     parser: '@typescript-eslint/parser',
     requireConfigFile: false,
