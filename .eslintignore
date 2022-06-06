@@ -2,7 +2,7 @@
 node_modules
 dist
 # inline from file: `/vite.config.ts`, node: 'unplugin-vue-components/vite', param: `options.dts`
-components/index.d.ts 
+src/components/index.d.ts 
 # inline from file: `/package.json`, option: `script.sassdoc`, refer to node: 'sassdoc', param: `source`
 sassdoc
 

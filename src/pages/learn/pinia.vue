@@ -1,7 +1,7 @@
 <template>
   <p>{{ model }}</p>
   <select v-model="model" name="model">
-    <option v-for="(item, index) in models" :key="index" :value="item">
+    <option v-for="(item, index) in MODELS" :key="index" :value="item">
       {{ item }}
     </option>
   </select>
@@ -11,9 +11,8 @@
 import { ref, watchEffect } from 'vue'
 import { useModel } from '~/stores/app'
 
-const app = useModel()
-const model = ref(app.model)
-const { MODELS: models, SET_MODEL } = app
+const { MODEL, SET_MODEL, MODELS } = useModel()
+const model = ref(MODEL)
 
 watchEffect(() => {
   SET_MODEL(model.value)
