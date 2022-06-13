@@ -4,4 +4,4 @@
 
 /* eslint-disable no-unused-vars */
 
-type UnionOf<T extends readonly any[]> = T[number]
+type UnionOf<T extends readonly unknown[]> = T[number]
