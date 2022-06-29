@@ -11,6 +11,8 @@
 /// @param {'position'|'flex'} $type ['position'] 居中方式
 ///
 /// 若设置为 'flex' ，需在目标节点的上一级节点使用
+/// 
+/// @fixme position 模式下，高度上并没有做到居中。
 
 @mixin center($direction: 'xy', $type: 'position') {
   @if $type == 'position' {
